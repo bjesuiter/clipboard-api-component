@@ -1,6 +1,9 @@
 ## Custom ignores
 
 .idea
+dist
+.stencil
+www
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
