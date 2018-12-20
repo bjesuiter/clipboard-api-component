@@ -12,58 +12,42 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
+  interface ClipboardWrapper {
     /**
-    * The first name
+    * The text copied into and pasted from the clipboard
     */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+    'text': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+  interface ClipboardWrapperAttributes extends StencilHTMLAttributes {
     /**
-    * The first name
+    * The text copied into and pasted from the clipboard
     */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+    'text'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'ClipboardWrapper': Components.ClipboardWrapper;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'clipboard-wrapper': Components.ClipboardWrapperAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLClipboardWrapperElement extends Components.ClipboardWrapper, HTMLStencilElement {}
+  var HTMLClipboardWrapperElement: {
+    prototype: HTMLClipboardWrapperElement;
+    new (): HTMLClipboardWrapperElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'clipboard-wrapper': HTMLClipboardWrapperElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'clipboard-wrapper': HTMLClipboardWrapperElement;
   }
 
 
