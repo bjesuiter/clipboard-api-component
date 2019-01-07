@@ -13,16 +13,10 @@ import '@stencil/core';
 export namespace Components {
 
   interface ClipboardWrapper {
-    /**
-    * The text copied into and pasted from the clipboard
-    */
-    'text': string;
+    'writeTextToClipboard': (newText: string) => void;
   }
   interface ClipboardWrapperAttributes extends StencilHTMLAttributes {
-    /**
-    * The text copied into and pasted from the clipboard
-    */
-    'text'?: string;
+    'onTextChange'?: (event: CustomEvent<string>) => void;
   }
 }
 
