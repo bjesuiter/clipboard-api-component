@@ -2,6 +2,8 @@
 
 # Clipboard-Wrapper Component
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bjesuiter/clipboard-api-component.svg)](https://greenkeeper.io/)
+
 ## Angular Usage
 
 Using a Stencil built web component collection 
